@@ -1,0 +1,25 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	ACC                     304A
+//	BOTH                    3037
+//	CHAR                    3043
+//	CHDNE                   306A
+//	CHECKAC                 304B
+//	CHR0                    306D
+//	CHR1                    306E
+//	CODE                    3045
+//	DENIEDS                 306F
+//	GOTIT                   302B
+//	GRANTS                  307F
+//	INTEN                   3042
+//	KBDR                    3041
+//	KBISR                   303E
+//	KBISRV                  303F
+//	KBSR                    3040
+//	LOOP                    3006
+//	NEITH                   303B
+//	NL                      3090
+//	NO                      3032
+//	NUMCHAR                 3044
+//	SP                      303D
+//	STARTS                  3092

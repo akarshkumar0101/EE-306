@@ -1,0 +1,1076 @@
+<?xml version="1.0"?>
+<test-suite>
+
+ <test-case>
+  <name>1: Testcase for DISPLAY_BOARD</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R0</register><value>xFEED</value></test-register>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>DISPLAY_BOARD</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>xFEED</value></test-register>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-stdout><value>\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+\n</value></test-stdout>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>2: GRID_ADDRESS for (0,0)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R1</register><value>0</value></test-register>
+	<test-register><register>R2</register><value>0</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>GRID_ADDRESS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>x3035</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>3: GRID_ADDRESS for (1,1)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R1</register><value>1</value></test-register>
+	<test-register><register>R2</register><value>1</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>GRID_ADDRESS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>x304B</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>4: GRID_ADDRESS for (3,3)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R1</register><value>3</value></test-register>
+	<test-register><register>R2</register><value>3</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>GRID_ADDRESS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>x3077</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>5: GRID_ADDRESS for (1,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R1</register><value>1</value></test-register>
+	<test-register><register>R2</register><value>2</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>GRID_ADDRESS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>x304D</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>6: GRID_ADDRESS for (2,0)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R1</register><value>2</value></test-register>
+	<test-register><register>R2</register><value>0</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>GRID_ADDRESS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>x305D</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>7: COUNT_BOMBS for location (0,0) with LL (3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+	
+	
+   
+	<test-register><register>R0</register><value>x6004</value></test-register>
+	<test-register><register>R1</register><value>0</value></test-register>
+	<test-register><register>R2</register><value>0</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>COUNT_BOMBS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>1</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>8: COUNT_BOMBS for location (2,2) with LL (3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+	
+	<test-register><register>R0</register><value>x6004</value></test-register>
+	<test-register><register>R1</register><value>2</value></test-register>
+	<test-register><register>R2</register><value>2</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>COUNT_BOMBS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>4</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>9: COUNT_BOMBS for location (3,3) with LL (3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+	
+	<test-register><register>R0</register><value>x6004</value></test-register>
+	<test-register><register>R1</register><value>3</value></test-register>
+	<test-register><register>R2</register><value>3</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>COUNT_BOMBS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>0</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>10: COUNT_BOMBS for location (0,2) with LL (3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+	
+	<test-register><register>R0</register><value>x6004</value></test-register>
+	<test-register><register>R1</register><value>0</value></test-register>
+	<test-register><register>R2</register><value>2</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>COUNT_BOMBS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>-1</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>11: COUNT_BOMBS for location (2,3) with LL (3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+	
+	<test-register><register>R0</register><value>x6004</value></test-register>
+	<test-register><register>R1</register><value>2</value></test-register>
+	<test-register><register>R2</register><value>3</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>COUNT_BOMBS</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R0</register><value>1</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>12: LOAD_BOARD for LL (3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+	
+	<test-register><register>R0</register><value>x6004</value></test-register>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>LOAD_BOARD</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+    
+	<test-value><address>x3035</address><value>x31</value></test-value>
+	<test-value><address>x3037</address><value>x33</value></test-value>
+	<test-value><address>x3039</address><value>x2A</value></test-value>
+	<test-value><address>x303B</address><value>x32</value></test-value>
+	
+	<test-value><address>x3049</address><value>x32</value></test-value>
+	<test-value><address>x304B</address><value>x2A</value></test-value>
+	<test-value><address>x304D</address><value>x2A</value></test-value>
+	<test-value><address>x304F</address><value>x32</value></test-value>
+	
+	<test-value><address>x305D</address><value>x33</value></test-value>
+	<test-value><address>x305F</address><value>x2A</value></test-value>
+	<test-value><address>x3061</address><value>x34</value></test-value>
+	<test-value><address>x3063</address><value>x31</value></test-value>
+	
+	<test-value><address>x3071</address><value>x32</value></test-value>
+	<test-value><address>x3073</address><value>x2A</value></test-value>
+	<test-value><address>x3075</address><value>x32</value></test-value>
+	<test-value><address>x3077</address><value>x20</value></test-value>
+	
+	
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>13: LOAD_BOARD for Null LL</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x0000</value></test-value>
+	
+	<test-register><register>R0</register><value>x0000</value></test-register>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>LOAD_BOARD</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+    
+	<test-value><address>x3035</address><value>x20</value></test-value>
+	<test-value><address>x3037</address><value>x20</value></test-value>
+	<test-value><address>x3039</address><value>x20</value></test-value>
+	<test-value><address>x303B</address><value>x20</value></test-value>
+	
+	<test-value><address>x3049</address><value>x20</value></test-value>
+	<test-value><address>x304B</address><value>x20</value></test-value>
+	<test-value><address>x304D</address><value>x20</value></test-value>
+	<test-value><address>x304F</address><value>x20</value></test-value>
+	
+	<test-value><address>x305D</address><value>x20</value></test-value>
+	<test-value><address>x305F</address><value>x20</value></test-value>
+	<test-value><address>x3061</address><value>x20</value></test-value>
+	<test-value><address>x3063</address><value>x20</value></test-value>
+	
+	<test-value><address>x3071</address><value>x20</value></test-value>
+	<test-value><address>x3073</address><value>x20</value></test-value>
+	<test-value><address>x3075</address><value>x20</value></test-value>
+	<test-value><address>x3077</address><value>x20</value></test-value>
+	
+	
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>14: LOAD_BOARD for Full LL</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>  
+	<test-value><address>x6000</address><value>x6013</value></test-value>
+	
+	<test-value><address>x6001</address><value>x0000</value></test-value>
+	<test-value><address>x6002</address><value>x0002</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0003</value></test-value>
+	<test-value><address>x6006</address><value>x6019</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0002</value></test-value>
+	<test-value><address>x6008</address><value>x0000</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0003</value></test-value>
+	<test-value><address>x600C</address><value>x602E</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0001</value></test-value>
+	<test-value><address>x600E</address><value>x0000</value></test-value>
+	<test-value><address>x600F</address><value>x601C</value></test-value>
+	
+	<test-value><address>x6010</address><value>x0001</value></test-value>
+	<test-value><address>x6011</address><value>x0002</value></test-value>
+	<test-value><address>x6012</address><value>x6025</value></test-value>
+	
+	<test-value><address>x6013</address><value>x0000</value></test-value>
+	<test-value><address>x6014</address><value>x0001</value></test-value>
+	<test-value><address>x6015</address><value>x6010</value></test-value>
+	
+	<test-value><address>x6016</address><value>x0003</value></test-value>
+	<test-value><address>x6017</address><value>x0000</value></test-value>
+	<test-value><address>x6018</address><value>x0000</value></test-value>
+	
+	<test-value><address>x6019</address><value>x0003</value></test-value>
+	<test-value><address>x601A</address><value>x0001</value></test-value>
+	<test-value><address>x601B</address><value>x6022</value></test-value>
+	
+	<test-value><address>x601C</address><value>x0001</value></test-value>
+	<test-value><address>x601D</address><value>x0001</value></test-value>
+	<test-value><address>x601E</address><value>x6028</value></test-value>
+	
+	<test-value><address>x601F</address><value>x0000</value></test-value>
+	<test-value><address>x6020</address><value>x0000</value></test-value>
+	<test-value><address>x6021</address><value>x6001</value></test-value>
+	
+	<test-value><address>x6022</address><value>x0000</value></test-value>
+	<test-value><address>x6023</address><value>x0003</value></test-value>
+	<test-value><address>x6024</address><value>x602B</value></test-value>
+	
+	<test-value><address>x6025</address><value>x0002</value></test-value>
+	<test-value><address>x6026</address><value>x0001</value></test-value>
+	<test-value><address>x6027</address><value>x601F</value></test-value>
+	
+	<test-value><address>x6028</address><value>x0002</value></test-value>
+	<test-value><address>x6029</address><value>x0002</value></test-value>
+	<test-value><address>x602A</address><value>x6004</value></test-value>
+	
+	<test-value><address>x602B</address><value>x0001</value></test-value>
+	<test-value><address>x602C</address><value>x0003</value></test-value>
+	<test-value><address>x602D</address><value>x6007</value></test-value>
+	
+	<test-value><address>x602E</address><value>x0003</value></test-value>
+	<test-value><address>x602F</address><value>x0002</value></test-value>
+	<test-value><address>x6030</address><value>x6016</value></test-value>
+	
+	
+	<test-register><register>R0</register><value>x6013</value></test-register>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>LOAD_BOARD</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+    
+	<test-value><address>x3035</address><value>x2A</value></test-value>
+	<test-value><address>x3037</address><value>x2A</value></test-value>
+	<test-value><address>x3039</address><value>x2A</value></test-value>
+	<test-value><address>x303B</address><value>x2A</value></test-value>
+	
+	<test-value><address>x3049</address><value>x2A</value></test-value>
+	<test-value><address>x304B</address><value>x2A</value></test-value>
+	<test-value><address>x304D</address><value>x2A</value></test-value>
+	<test-value><address>x304F</address><value>x2A</value></test-value>
+
+	<test-value><address>x305D</address><value>x2A</value></test-value>
+	<test-value><address>x305F</address><value>x2A</value></test-value>
+	<test-value><address>x3061</address><value>x2A</value></test-value>
+	<test-value><address>x3063</address><value>x2A</value></test-value>
+	
+	<test-value><address>x3071</address><value>x2A</value></test-value>
+	<test-value><address>x3073</address><value>x2A</value></test-value>
+	<test-value><address>x3075</address><value>x2A</value></test-value>
+	<test-value><address>x3077</address><value>x2A</value></test-value>
+	
+	
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>15: LOAD_BOARD for LL(0,1)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x6001</value></test-value>
+   	<test-value><address>x6001</address><value>x0000</value></test-value>
+   	<test-value><address>x6002</address><value>x0001</value></test-value>
+   	<test-value><address>x6003</address><value>x0000</value></test-value>
+	
+	<test-register><register>R0</register><value>x6001</value></test-register>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>LOAD_BOARD</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+    
+	<test-value><address>x3035</address><value>x31</value></test-value>
+	<test-value><address>x3037</address><value>x2A</value></test-value>
+	<test-value><address>x3039</address><value>x31</value></test-value>
+	<test-value><address>x303B</address><value>x20</value></test-value>
+	
+	<test-value><address>x3049</address><value>x31</value></test-value>
+	<test-value><address>x304B</address><value>x31</value></test-value>
+	<test-value><address>x304D</address><value>x31</value></test-value>
+	<test-value><address>x304F</address><value>x20</value></test-value>
+	
+	<test-value><address>x305D</address><value>x20</value></test-value>
+	<test-value><address>x305F</address><value>x20</value></test-value>
+	<test-value><address>x3061</address><value>x20</value></test-value>
+	<test-value><address>x3063</address><value>x20</value></test-value>
+	
+	<test-value><address>x3071</address><value>x20</value></test-value>
+	<test-value><address>x3073</address><value>x20</value></test-value>
+	<test-value><address>x3075</address><value>x20</value></test-value>
+	<test-value><address>x3077</address><value>x20</value></test-value>
+	
+	
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>16: LOAD_BOARD for LL(3,1)->(1,2)->(3,3)->(2,1)->(1,1)->(0,2)->(0,0)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x6001</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x6010</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0003</value></test-value>
+	<test-value><address>x600B</address><value>x0003</value></test-value>
+	<test-value><address>x600C</address><value>x600D</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0002</value></test-value>
+	<test-value><address>x600E</address><value>x0001</value></test-value>
+	<test-value><address>x600F</address><value>x6001</value></test-value>
+	
+	<test-value><address>x6010</address><value>x0000</value></test-value>
+	<test-value><address>x6011</address><value>x0002</value></test-value>
+	<test-value><address>x6012</address><value>x6013</value></test-value>
+	
+	<test-value><address>x6013</address><value>x0000</value></test-value>
+	<test-value><address>x6014</address><value>x0000</value></test-value>
+	<test-value><address>x6015</address><value>x0000</value></test-value>
+	
+	<test-register><register>R0</register><value>x6004</value></test-register>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>LOAD_BOARD</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+    
+	<test-value><address>x3035</address><value>x2A</value></test-value>
+	<test-value><address>x3037</address><value>x34</value></test-value>
+	<test-value><address>x3039</address><value>x2A</value></test-value>
+	<test-value><address>x303B</address><value>x32</value></test-value>
+	
+	<test-value><address>x3049</address><value>x33</value></test-value>
+	<test-value><address>x304B</address><value>x2A</value></test-value>
+	<test-value><address>x304D</address><value>x2A</value></test-value>
+	<test-value><address>x304F</address><value>x32</value></test-value>
+	
+	<test-value><address>x305D</address><value>x33</value></test-value>
+	<test-value><address>x305F</address><value>x2A</value></test-value>
+	<test-value><address>x3061</address><value>x35</value></test-value>
+	<test-value><address>x3063</address><value>x32</value></test-value>
+	
+	<test-value><address>x3071</address><value>x32</value></test-value>
+	<test-value><address>x3073</address><value>x2A</value></test-value>
+	<test-value><address>x3075</address><value>x33</value></test-value>
+	<test-value><address>x3077</address><value>x2A</value></test-value>
+	
+	
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>17: Main Program w/ LL (3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+
+   </input>
+   <output>
+	<test-stdout><value>\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+
+   0 1 2 3 
+  +-+-+-+-+
+0 |1|3|*|2|
+  +-+-+-+-+
+1 |2|*|*|2|
+  +-+-+-+-+
+2 |3|*|4|1|
+  +-+-+-+-+
+3 |2|*|2| |
+  +-+-+-+-+
+
+Board Loaded\n</value></test-stdout>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>18: Main Program w/ LL (0,0)->(0,1)->(0,2)->(1,0)->(1,2)->(2,0)->(2,1)->(2,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-value><address>x6000</address><value>x6012</value></test-value>
+	<test-value><address>x6001</address><value>x0002</value></test-value>
+	<test-value><address>x6002</address><value>x0000</value></test-value>
+	<test-value><address>x6003</address><value>x600C</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0000</value></test-value>
+	<test-value><address>x6005</address><value>x0002</value></test-value>
+	<test-value><address>x6006</address><value>x601B</value></test-value>
+	
+	<test-value><address>x6009</address><value>x0001</value></test-value>
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600C</address><value>x0002</value></test-value>
+	<test-value><address>x600D</address><value>x0001</value></test-value>
+	<test-value><address>x600E</address><value>x601E</value></test-value>
+	
+	<test-value><address>x6012</address><value>x0000</value></test-value>
+	<test-value><address>x6013</address><value>x0000</value></test-value>
+	<test-value><address>x6014</address><value>x6015</value></test-value>
+	
+	<test-value><address>x6015</address><value>x0000</value></test-value>
+	<test-value><address>x6016</address><value>x0001</value></test-value>
+	<test-value><address>x6017</address><value>x6004</value></test-value>
+	
+	<test-value><address>x601B</address><value>x0001</value></test-value>
+	<test-value><address>x601C</address><value>x0000</value></test-value>
+	<test-value><address>x601D</address><value>x6009</value></test-value>
+	
+	<test-value><address>x601E</address><value>x0002</value></test-value>
+	<test-value><address>x601F</address><value>x0002</value></test-value>
+	<test-value><address>x6020</address><value>x0000</value></test-value>
+
+   </input>
+   <output>
+	<test-stdout><value>\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+
+   0 1 2 3 
+  +-+-+-+-+
+0 |*|*|*|2|
+  +-+-+-+-+
+1 |*|8|*|3|
+  +-+-+-+-+
+2 |*|*|*|2|
+  +-+-+-+-+
+3 |2|3|2|1|
+  +-+-+-+-+
+
+Board Loaded\n</value></test-stdout>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>19: Main Program w/ LL (3,3)->(0,0)->(0,3)->(3,0)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-value><address>x6000</address><value>x7009</value></test-value>
+	<test-value><address>x7001</address><value>x0003</value></test-value>
+	<test-value><address>x7002</address><value>x0000</value></test-value>
+	<test-value><address>x7003</address><value>x0000</value></test-value>
+	
+	<test-value><address>x7004</address><value>x0000</value></test-value>
+	<test-value><address>x7005</address><value>x0003</value></test-value>
+	<test-value><address>x7006</address><value>x7001</value></test-value>
+	
+	<test-value><address>x7009</address><value>x0003</value></test-value>
+	<test-value><address>x700A</address><value>x0003</value></test-value>
+	<test-value><address>x700B</address><value>x700C</value></test-value>
+	
+	<test-value><address>x700C</address><value>x0000</value></test-value>
+	<test-value><address>x700D</address><value>x0000</value></test-value>
+	<test-value><address>x700E</address><value>x7004</value></test-value>
+
+   </input>
+   <output>
+	<test-stdout><value>\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+
+   0 1 2 3 
+  +-+-+-+-+
+0 |*|1|1|*|
+  +-+-+-+-+
+1 |1|1|1|1|
+  +-+-+-+-+
+2 |1|1|1|1|
+  +-+-+-+-+
+3 |*|1|1|*|
+  +-+-+-+-+
+
+Board Loaded\n</value></test-stdout>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>20: Main Program w/ Null LL</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-value><address>x6000</address><value>x0000</value></test-value>
+
+   </input>
+   <output>
+	<test-stdout><value>\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+
+   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Loaded\n</value></test-stdout>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>21: Main Program w/ LL(1,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-value><address>x6000</address><value>x0001</value></test-value>
+   	<test-value><address>x0001</address><value>x0001</value></test-value>
+   	<test-value><address>x0002</address><value>x0002</value></test-value>
+   	<test-value><address>x0003</address><value>x0000</value></test-value>
+
+   </input>
+   <output>
+	<test-stdout><value>\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+
+   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1|1|
+  +-+-+-+-+
+1 | |1|*|1|
+  +-+-+-+-+
+2 | |1|1|1|
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Loaded\n</value></test-stdout>
+   </output>
+ </test-case>
+   
+ <test-case>
+  <name>22: Modifying Starter Code (Should say "Did not finish!")</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>1</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-value><address>x0100</address><value>x3009</value></test-value>
+	<test-value><address>x0101</address><value>x3018</value></test-value>
+	<test-value><address>x0102</address><value>x302A</value></test-value>
+	<test-value><address>x0103</address><value>x3034</value></test-value>
+    <test-value><address>x0104</address><value>x303E</value></test-value>
+	<test-value><address>x0105</address><value>x3048</value></test-value>
+	<test-value><address>x0106</address><value>x3052</value></test-value>
+	<test-value><address>x0107</address><value>x305C</value></test-value>
+    <test-value><address>x0108</address><value>x3066</value></test-value>
+	<test-value><address>x0109</address><value>x3070</value></test-value>
+	<test-value><address>x010A</address><value>x307A</value></test-value>
+	
+   </input>
+   <output>
+	<test-value><address>x3001</address><value>xE016</value></test-value>
+	<test-value><address>x3002</address><value>xF022</value></test-value>
+	<test-value><address>x3003</address><value>xA024</value></test-value>
+	<test-value><address>x3006</address><value>xE002</value></test-value>
+	<test-value><address>x3007</address><value>xF022</value></test-value>
+	<test-value><address>x3008</address><value>xF025</value></test-value>
+	<test-value><address>x3028</address><value>x6000</value></test-value>
+	<test-value><address>x3029</address><value>x0000</value></test-value>
+	
+    <test-string><address>x0100</address><value>\nBoard Loaded\n</value></test-string>
+	<test-string><address>x0101</address><value>\nBoard Initial\n</value></test-string>
+	<test-string><address>x0102</address><value>+-+-+-+-+</value></test-string>
+	<test-string><address>x0103</address><value>| | | | |</value></test-string>
+	<test-string><address>x0104</address><value>+-+-+-+-+</value></test-string>
+	<test-string><address>x0105</address><value>| | | | |</value></test-string>
+	<test-string><address>x0106</address><value>+-+-+-+-+</value></test-string>
+	<test-string><address>x0107</address><value>| | | | |</value></test-string>
+	<test-string><address>x0108</address><value>+-+-+-+-+</value></test-string>
+	<test-string><address>x0109</address><value>| | | | |</value></test-string>
+	<test-string><address>x010A</address><value>+-+-+-+-+</value></test-string>
+	
+   </output>
+ </test-case>
+
+ 
+ </test-suite>

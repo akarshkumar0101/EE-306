@@ -1,0 +1,7 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	CHAR                    A00C
+//	ISRR0                   A00B
+//	KBDR                    A00F
+//	KBSR                    A00E
+//	NUMCHAR                 A00D

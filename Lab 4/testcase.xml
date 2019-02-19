@@ -1,0 +1,1322 @@
+<?xml version="1.0"?>
+<test-suite>
+ <test-case>
+  <name>1: Check GET_MOVE for compliance</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-stdin><value>00</value></test-stdin>
+	<test-subr><name>GET_MOVE</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>2: Check IS_VALID_MOVE for compliance</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>IS_VALID_MOVE</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>3: Check APPLY_MOVE for compliance</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>APPLY_MOVE</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+
+ <test-case>
+  <name>4: Check IS_GAME_OVER for compliance</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>IS_GAME_OVER</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <test-case>
+  <name>5: Check GAME_OVER for compliance</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+	<test-subr><name>GAME_OVER</name>
+		<stack>xBADE</stack><r7>xA000</r7><r5>xDEAF</r5><params></params>
+	</test-subr>
+   </input>
+   <output>
+	<test-register><register>R1</register><value>xBEEF</value></test-register>
+	<test-register><register>R2</register><value>xDEAD</value></test-register>
+	<test-register><register>R3</register><value>xCAFE</value></test-register>
+	<test-register><register>R4</register><value>xFADE</value></test-register>
+	<test-register><register>R5</register><value>xDEAF</value></test-register>
+	<test-register><register>R6</register><value>xBADE</value></test-register>
+   </output>
+ </test-case>
+ 
+ <!-- Testing User Input Processing Routines-->
+ <test-case>
+  <name>6: Test Valid Move (0,0)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-stdin><value>00</value></test-stdin>
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (0,0)
+
+   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+ <test-case>
+  <name>7: Test Valid Move (3,3)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-stdin><value>33</value></test-stdin>
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (3,3)
+
+   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+ <test-case>
+  <name>8: Test Invalid Move (0,4)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-stdin><value>04</value></test-stdin>
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (0,4)
+Invalid move - try again!
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+
+ <test-case>
+  <name>9: Test Invalid Move (i,j)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-stdin><value>ij</value></test-stdin>
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (i,j)
+Invalid move - try again!
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+ <test-case>
+  <name>10: Test Invalid Move (\n,\n)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-stdin><value>\n\n</value></test-stdin>
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (\n,\n)
+Invalid move - try again!
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+<!-- Testing APPLY_MOVE -->
+
+<test-case>
+  <name>11: Test APPLY_MOVE (0,0) with LL(3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+    <test-stdin><value>00</value></test-stdin>
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (0,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 |1| | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+<test-case>
+  <name>12: Test APPLY_MOVE (3,3) with LL(3,1)->(1,2)->(2,1)->(1,1)->(0,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+	<test-value><address>x6000</address><value>x6004</value></test-value>
+	<test-value><address>x6001</address><value>x0001</value></test-value>
+	<test-value><address>x6002</address><value>x0001</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0001</value></test-value>
+	<test-value><address>x6006</address><value>x6007</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0001</value></test-value>
+	<test-value><address>x6008</address><value>x0002</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0001</value></test-value>
+	<test-value><address>x600C</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x0002</value></test-value>
+	<test-value><address>x600F</address><value>x0000</value></test-value>
+    <test-stdin><value>00</value></test-stdin>
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (0,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 |1| | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+<test-case>
+  <name>13: Test repeated moves (3,3),(3,3),(2,2),(0,0),(0,2),(2,2) with LL(0,1)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+   	<test-value><address>x6000</address><value>x6001</value></test-value>
+   	<test-value><address>x6001</address><value>x0000</value></test-value>
+   	<test-value><address>x6002</address><value>x0001</value></test-value>
+   	<test-value><address>x6003</address><value>x0000</value></test-value>
+    <test-stdin><value>333322000222</value></test-stdin>
+
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (3,3)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (3,3)
+You already tried this location!
+   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (2,2)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (0,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 |1| | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (0,2)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 |1| |1| |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (2,2)
+You already tried this location!
+   0 1 2 3 
+  +-+-+-+-+
+0 |1| |1| |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+
+
+<test-case>
+  <name>14: Test repeated moves (1,1),(3,3),(1,1) with LL (0,0)->(0,1)->(0,2)->(1,0)->(1,2)->(2,0)->(2,1)->(2,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-value><address>x6000</address><value>x6012</value></test-value>
+	<test-value><address>x6001</address><value>x0002</value></test-value>
+	<test-value><address>x6002</address><value>x0000</value></test-value>
+	<test-value><address>x6003</address><value>x600C</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0000</value></test-value>
+	<test-value><address>x6005</address><value>x0002</value></test-value>
+	<test-value><address>x6006</address><value>x601B</value></test-value>
+	
+	<test-value><address>x6009</address><value>x0001</value></test-value>
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600C</address><value>x0002</value></test-value>
+	<test-value><address>x600D</address><value>x0001</value></test-value>
+	<test-value><address>x600E</address><value>x601E</value></test-value>
+	
+	<test-value><address>x6012</address><value>x0000</value></test-value>
+	<test-value><address>x6013</address><value>x0000</value></test-value>
+	<test-value><address>x6014</address><value>x6015</value></test-value>
+	
+	<test-value><address>x6015</address><value>x0000</value></test-value>
+	<test-value><address>x6016</address><value>x0001</value></test-value>
+	<test-value><address>x6017</address><value>x6004</value></test-value>
+	
+	<test-value><address>x601B</address><value>x0001</value></test-value>
+	<test-value><address>x601C</address><value>x0000</value></test-value>
+	<test-value><address>x601D</address><value>x6009</value></test-value>
+	
+	<test-value><address>x601E</address><value>x0002</value></test-value>
+	<test-value><address>x601F</address><value>x0002</value></test-value>
+	<test-value><address>x6020</address><value>x0000</value></test-value>
+    <test-stdin><value>113311</value></test-stdin>
+
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (1,1)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | |8| | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (3,3)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | |8| | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | |1|
+  +-+-+-+-+
+Enter a move: (1,1)
+You already tried this location!\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | |8| | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | |1|
+  +-+-+-+-+
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+<test-case>
+  <name>15: Test repeated moves + invalid move (-,0),(3,3),(1,1),(3,3) with Null LL</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+
+    <test-stdin><value>-0331133</value></test-stdin>
+
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (-,0)
+Invalid move - try again!
+Enter a move: (3,3)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (1,1)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (3,3)
+You already tried this location!
+   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (</value></test-stdout>
+   </output>
+ </test-case>
+
+<!-- Testing Game Over Routines aka playing the game -->
+
+<test-case>
+  <name>16: Playing the Game with moves (0,0) and Full LL</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+
+    <test-stdin><value>00</value></test-stdin>
+
+	<test-value><address>x6000</address><value>x6013</value></test-value>
+	
+	<test-value><address>x6001</address><value>x0000</value></test-value>
+	<test-value><address>x6002</address><value>x0002</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0003</value></test-value>
+	<test-value><address>x6006</address><value>x6019</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0002</value></test-value>
+	<test-value><address>x6008</address><value>x0000</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0003</value></test-value>
+	<test-value><address>x600C</address><value>x602E</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0001</value></test-value>
+	<test-value><address>x600E</address><value>x0000</value></test-value>
+	<test-value><address>x600F</address><value>x601C</value></test-value>
+	
+	<test-value><address>x6010</address><value>x0001</value></test-value>
+	<test-value><address>x6011</address><value>x0002</value></test-value>
+	<test-value><address>x6012</address><value>x6025</value></test-value>
+	
+	<test-value><address>x6013</address><value>x0000</value></test-value>
+	<test-value><address>x6014</address><value>x0001</value></test-value>
+	<test-value><address>x6015</address><value>x6010</value></test-value>
+	
+	<test-value><address>x6016</address><value>x0003</value></test-value>
+	<test-value><address>x6017</address><value>x0000</value></test-value>
+	<test-value><address>x6018</address><value>x0000</value></test-value>
+	
+	<test-value><address>x6019</address><value>x0003</value></test-value>
+	<test-value><address>x601A</address><value>x0001</value></test-value>
+	<test-value><address>x601B</address><value>x6022</value></test-value>
+	
+	<test-value><address>x601C</address><value>x0001</value></test-value>
+	<test-value><address>x601D</address><value>x0001</value></test-value>
+	<test-value><address>x601E</address><value>x6028</value></test-value>
+	
+	<test-value><address>x601F</address><value>x0000</value></test-value>
+	<test-value><address>x6020</address><value>x0000</value></test-value>
+	<test-value><address>x6021</address><value>x6001</value></test-value>
+	
+	<test-value><address>x6022</address><value>x0000</value></test-value>
+	<test-value><address>x6023</address><value>x0003</value></test-value>
+	<test-value><address>x6024</address><value>x602B</value></test-value>
+	
+	<test-value><address>x6025</address><value>x0002</value></test-value>
+	<test-value><address>x6026</address><value>x0001</value></test-value>
+	<test-value><address>x6027</address><value>x601F</value></test-value>
+	
+	<test-value><address>x6028</address><value>x0002</value></test-value>
+	<test-value><address>x6029</address><value>x0002</value></test-value>
+	<test-value><address>x602A</address><value>x6004</value></test-value>
+	
+	<test-value><address>x602B</address><value>x0001</value></test-value>
+	<test-value><address>x602C</address><value>x0003</value></test-value>
+	<test-value><address>x602D</address><value>x6007</value></test-value>
+	
+	<test-value><address>x602E</address><value>x0003</value></test-value>
+	<test-value><address>x602F</address><value>x0002</value></test-value>
+	<test-value><address>x6030</address><value>x6016</value></test-value>
+
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (0,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 |*| | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+You lost! Better luck next time!
+
+   0 1 2 3 
+  +-+-+-+-+
+0 |*|*|*|*|
+  +-+-+-+-+
+1 |*|*|*|*|
+  +-+-+-+-+
+2 |*|*|*|*|
+  +-+-+-+-+
+3 |*|*|*|*|
+  +-+-+-+-+
+
+Your score is: 1
+</value></test-stdout>
+   </output>
+ </test-case>
+
+<test-case>
+  <name>17: Playing the Game with moves (3,0) and Full LL except (3,0)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+
+    <test-stdin><value>30</value></test-stdin>
+
+	<test-value><address>x6000</address><value>x6013</value></test-value>
+	
+	<test-value><address>x6001</address><value>x0000</value></test-value>
+	<test-value><address>x6002</address><value>x0002</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0003</value></test-value>
+	<test-value><address>x6006</address><value>x6019</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0002</value></test-value>
+	<test-value><address>x6008</address><value>x0000</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0003</value></test-value>
+	<test-value><address>x600C</address><value>x602E</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0001</value></test-value>
+	<test-value><address>x600E</address><value>x0000</value></test-value>
+	<test-value><address>x600F</address><value>x601C</value></test-value>
+	
+	<test-value><address>x6010</address><value>x0001</value></test-value>
+	<test-value><address>x6011</address><value>x0002</value></test-value>
+	<test-value><address>x6012</address><value>x6025</value></test-value>
+	
+	<test-value><address>x6013</address><value>x0000</value></test-value>
+	<test-value><address>x6014</address><value>x0001</value></test-value>
+	<test-value><address>x6015</address><value>x6010</value></test-value>
+	
+	<test-value><address>x6019</address><value>x0003</value></test-value>
+	<test-value><address>x601A</address><value>x0001</value></test-value>
+	<test-value><address>x601B</address><value>x6022</value></test-value>
+	
+	<test-value><address>x601C</address><value>x0001</value></test-value>
+	<test-value><address>x601D</address><value>x0001</value></test-value>
+	<test-value><address>x601E</address><value>x6028</value></test-value>
+	
+	<test-value><address>x601F</address><value>x0000</value></test-value>
+	<test-value><address>x6020</address><value>x0000</value></test-value>
+	<test-value><address>x6021</address><value>x6001</value></test-value>
+	
+	<test-value><address>x6022</address><value>x0000</value></test-value>
+	<test-value><address>x6023</address><value>x0003</value></test-value>
+	<test-value><address>x6024</address><value>x602B</value></test-value>
+	
+	<test-value><address>x6025</address><value>x0002</value></test-value>
+	<test-value><address>x6026</address><value>x0001</value></test-value>
+	<test-value><address>x6027</address><value>x601F</value></test-value>
+	
+	<test-value><address>x6028</address><value>x0002</value></test-value>
+	<test-value><address>x6029</address><value>x0002</value></test-value>
+	<test-value><address>x602A</address><value>x6004</value></test-value>
+	
+	<test-value><address>x602B</address><value>x0001</value></test-value>
+	<test-value><address>x602C</address><value>x0003</value></test-value>
+	<test-value><address>x602D</address><value>x6007</value></test-value>
+	
+	<test-value><address>x602E</address><value>x0003</value></test-value>
+	<test-value><address>x602F</address><value>x0002</value></test-value>
+	<test-value><address>x6030</address><value>x0000</value></test-value>
+
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (3,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 |3| | | |
+  +-+-+-+-+
+
+Congrats, you won!
+
+   0 1 2 3 
+  +-+-+-+-+
+0 |*|*|*|*|
+  +-+-+-+-+
+1 |*|*|*|*|
+  +-+-+-+-+
+2 |*|*|*|*|
+  +-+-+-+-+
+3 |3|*|*|*|
+  +-+-+-+-+
+
+Your score is: 99
+</value></test-stdout>
+   </output>
+ </test-case>
+
+<test-case>
+  <name>18: Playing the game with moves (0,1),(0,2),(1,0),(1,1),(1,2),(1,3),(2,0),(2,1),(2,2),(3,3) and corner LL</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+
+    <test-stdin><value>01021011121320212233</value></test-stdin>
+    <test-value><address>x6000</address><value>x6009</value></test-value>
+	<test-value><address>x6001</address><value>x0003</value></test-value>
+	<test-value><address>x6002</address><value>x0000</value></test-value>
+	<test-value><address>x6003</address><value>x0000</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0000</value></test-value>
+	<test-value><address>x6005</address><value>x0003</value></test-value>
+	<test-value><address>x6006</address><value>x6001</value></test-value>
+	
+	<test-value><address>x6009</address><value>x0003</value></test-value>
+	<test-value><address>x600A</address><value>x0003</value></test-value>
+	<test-value><address>x600B</address><value>x600C</value></test-value>
+	
+	<test-value><address>x600C</address><value>x0000</value></test-value>
+	<test-value><address>x600D</address><value>x0000</value></test-value>
+	<test-value><address>x600E</address><value>x6004</value></test-value>
+
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (0,1)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1| | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (0,2)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (1,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 |1| | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (1,1)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 |1|1| | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (1,2)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 |1|1|1| |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (1,3)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 |1|1|1|1|
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (2,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 |1|1|1|1|
+  +-+-+-+-+
+2 |1| | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (2,1)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 |1|1|1|1|
+  +-+-+-+-+
+2 |1|1| | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (2,2)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 |1|1|1|1|
+  +-+-+-+-+
+2 |1|1|1| |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+Enter a move: (3,3)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | |1|1| |
+  +-+-+-+-+
+1 |1|1|1|1|
+  +-+-+-+-+
+2 |1|1|1| |
+  +-+-+-+-+
+3 | | | |*|
+  +-+-+-+-+
+
+You lost! Better luck next time!
+
+   0 1 2 3 
+  +-+-+-+-+
+0 |*|1|1|*|
+  +-+-+-+-+
+1 |1|1|1|1|
+  +-+-+-+-+
+2 |1|1|1|1|
+  +-+-+-+-+
+3 |*|1|1|*|
+  +-+-+-+-+
+
+Your score is: 10
+</value></test-stdout>
+   </output>
+ </test-case>
+
+<test-case>
+  <name>19: Playing the Game with moves (3,0) and Full LL except (3,0) and (3,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+
+    <test-stdin><value>3033</value></test-stdin>
+
+	<test-value><address>x6000</address><value>x6013</value></test-value>
+	
+	<test-value><address>x6001</address><value>x0000</value></test-value>
+	<test-value><address>x6002</address><value>x0002</value></test-value>
+	<test-value><address>x6003</address><value>x600D</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0003</value></test-value>
+	<test-value><address>x6005</address><value>x0003</value></test-value>
+	<test-value><address>x6006</address><value>x6019</value></test-value>
+	
+	<test-value><address>x6007</address><value>x0002</value></test-value>
+	<test-value><address>x6008</address><value>x0000</value></test-value>
+	<test-value><address>x6009</address><value>x600A</value></test-value>
+	
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x0003</value></test-value>
+	<test-value><address>x600C</address><value>x0000</value></test-value>
+	
+	<test-value><address>x600D</address><value>x0001</value></test-value>
+	<test-value><address>x600E</address><value>x0000</value></test-value>
+	<test-value><address>x600F</address><value>x601C</value></test-value>
+	
+	<test-value><address>x6010</address><value>x0001</value></test-value>
+	<test-value><address>x6011</address><value>x0002</value></test-value>
+	<test-value><address>x6012</address><value>x6025</value></test-value>
+	
+	<test-value><address>x6013</address><value>x0000</value></test-value>
+	<test-value><address>x6014</address><value>x0001</value></test-value>
+	<test-value><address>x6015</address><value>x6010</value></test-value>
+	
+	<test-value><address>x6019</address><value>x0003</value></test-value>
+	<test-value><address>x601A</address><value>x0001</value></test-value>
+	<test-value><address>x601B</address><value>x6022</value></test-value>
+	
+	<test-value><address>x601C</address><value>x0001</value></test-value>
+	<test-value><address>x601D</address><value>x0001</value></test-value>
+	<test-value><address>x601E</address><value>x6028</value></test-value>
+	
+	<test-value><address>x601F</address><value>x0000</value></test-value>
+	<test-value><address>x6020</address><value>x0000</value></test-value>
+	<test-value><address>x6021</address><value>x6001</value></test-value>
+	
+	<test-value><address>x6022</address><value>x0000</value></test-value>
+	<test-value><address>x6023</address><value>x0003</value></test-value>
+	<test-value><address>x6024</address><value>x602B</value></test-value>
+	
+	<test-value><address>x6025</address><value>x0002</value></test-value>
+	<test-value><address>x6026</address><value>x0001</value></test-value>
+	<test-value><address>x6027</address><value>x601F</value></test-value>
+	
+	<test-value><address>x6028</address><value>x0002</value></test-value>
+	<test-value><address>x6029</address><value>x0002</value></test-value>
+	<test-value><address>x602A</address><value>x6004</value></test-value>
+	
+	<test-value><address>x602B</address><value>x0001</value></test-value>
+	<test-value><address>x602C</address><value>x0003</value></test-value>
+	<test-value><address>x602D</address><value>x6007</value></test-value>
+
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (3,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 |3| | | |
+  +-+-+-+-+
+Enter a move: (3,3)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 |3| | |*|
+  +-+-+-+-+
+
+You lost! Better luck next time!
+
+   0 1 2 3 
+  +-+-+-+-+
+0 |*|*|*|*|
+  +-+-+-+-+
+1 |*|*|*|*|
+  +-+-+-+-+
+2 |*|*|*|*|
+  +-+-+-+-+
+3 |3|*|5|*|
+  +-+-+-+-+
+
+Your score is: 2
+</value></test-stdout>
+   </output>
+ </test-case>
+
+
+<test-case>
+  <name>20: Play full game with LL (4,0),(3,3),(1,1),(3,3) with LL(0,0)->(0,1)->(0,2)->(1,0)->(1,2)->(2,0)->(2,1)->(2,2)</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>10000000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>    
+    <test-value><address>x6000</address><value>x6012</value></test-value>
+	<test-value><address>x6001</address><value>x0002</value></test-value>
+	<test-value><address>x6002</address><value>x0000</value></test-value>
+	<test-value><address>x6003</address><value>x600C</value></test-value>
+	
+	<test-value><address>x6004</address><value>x0000</value></test-value>
+	<test-value><address>x6005</address><value>x0002</value></test-value>
+	<test-value><address>x6006</address><value>x601B</value></test-value>
+	
+	<test-value><address>x6009</address><value>x0001</value></test-value>
+	<test-value><address>x600A</address><value>x0002</value></test-value>
+	<test-value><address>x600B</address><value>x6001</value></test-value>
+	
+	<test-value><address>x600C</address><value>x0002</value></test-value>
+	<test-value><address>x600D</address><value>x0001</value></test-value>
+	<test-value><address>x600E</address><value>x601E</value></test-value>
+	
+	<test-value><address>x6012</address><value>x0000</value></test-value>
+	<test-value><address>x6013</address><value>x0000</value></test-value>
+	<test-value><address>x6014</address><value>x6015</value></test-value>
+	
+	<test-value><address>x6015</address><value>x0000</value></test-value>
+	<test-value><address>x6016</address><value>x0001</value></test-value>
+	<test-value><address>x6017</address><value>x6004</value></test-value>
+	
+	<test-value><address>x601B</address><value>x0001</value></test-value>
+	<test-value><address>x601C</address><value>x0000</value></test-value>
+	<test-value><address>x601D</address><value>x6009</value></test-value>
+	
+	<test-value><address>x601E</address><value>x0002</value></test-value>
+	<test-value><address>x601F</address><value>x0002</value></test-value>
+	<test-value><address>x6020</address><value>x0000</value></test-value>
+
+    <test-stdin><value>4033111100</value></test-stdin>
+
+   </input>
+   <output>	
+    <test-stdout><value>Minesweeper\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | | |
+  +-+-+-+-+
+
+Board Initial
+Enter a move: (4,0)
+Invalid move - try again!
+Enter a move: (3,3)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | | | | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | |1|
+  +-+-+-+-+
+Enter a move: (1,1)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | |8| | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | |1|
+  +-+-+-+-+
+Enter a move: (1,1)
+You already tried this location!
+   0 1 2 3 
+  +-+-+-+-+
+0 | | | | |
+  +-+-+-+-+
+1 | |8| | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | |1|
+  +-+-+-+-+
+Enter a move: (0,0)\n\n   0 1 2 3 
+  +-+-+-+-+
+0 |*| | | |
+  +-+-+-+-+
+1 | |8| | |
+  +-+-+-+-+
+2 | | | | |
+  +-+-+-+-+
+3 | | | |1|
+  +-+-+-+-+
+
+You lost! Better luck next time!
+
+   0 1 2 3 
+  +-+-+-+-+
+0 |*|*|*|2|
+  +-+-+-+-+
+1 |*|8|*|3|
+  +-+-+-+-+
+2 |*|*|*|2|
+  +-+-+-+-+
+3 |2|3|2|1|
+  +-+-+-+-+
+
+Your score is: 3
+</value></test-stdout>
+   </output>
+ </test-case>
+
+ <test-case>
+  <name>21: Modifying Starter Code</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>1</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-value><address>x0100</address><value>x3010</value></test-value>
+    <test-value><address>x0101</address><value>x301F</value></test-value>
+    <test-value><address>x0102</address><value>x303D</value></test-value>
+    <test-value><address>x0103</address><value>x3047</value></test-value>
+    <test-value><address>x0104</address><value>x3051</value></test-value>
+    <test-value><address>x0105</address><value>x305B</value></test-value>
+    <test-value><address>x0106</address><value>x3065</value></test-value>
+    <test-value><address>x0107</address><value>x306F</value></test-value>
+    <test-value><address>x0108</address><value>x3079</value></test-value>
+    <test-value><address>x0109</address><value>x3083</value></test-value>
+    <test-value><address>x010A</address><value>x308D</value></test-value>
+    <test-value><address>x010B</address><value>x302F</value></test-value>
+   
+   </input>
+   <output>
+    <test-value><address>x3000</address><value>xE02E</value></test-value>   
+    <test-value><address>x3001</address><value>xF022</value></test-value>
+    <test-value><address>x3003</address><value>xE01B</value></test-value>
+    <test-value><address>x3004</address><value>xF022</value></test-value>
+    <test-value><address>x3007</address><value>x1020</value></test-value>   
+    <test-value><address>x3008</address><value>x09FC</value></test-value>
+    <test-value><address>x300C</address><value>x1020</value></test-value>
+    <test-value><address>x300D</address><value>x05F7</value></test-value>   
+    <test-value><address>x300F</address><value>xF025</value></test-value>
+   
+    <test-string><address>x0100</address><value>\nBoard Loaded\n</value></test-string>
+    <test-string><address>x0101</address><value>\nBoard Initial\n</value></test-string>
+    <test-string><address>x010B</address><value>Minesweeper\n</value></test-string>
+    <test-value><address>x303C</address><value>x6000</value></test-value>
+    <test-string><address>x0102</address><value>+-+-+-+-+</value></test-string>
+    <test-string><address>x0103</address><value>| | | | |</value></test-string>
+    <test-string><address>x0104</address><value>+-+-+-+-+</value></test-string>
+    <test-string><address>x0105</address><value>| | | | |</value></test-string>
+    <test-string><address>x0106</address><value>+-+-+-+-+</value></test-string>
+    <test-string><address>x0107</address><value>| | | | |</value></test-string>
+    <test-string><address>x0108</address><value>+-+-+-+-+</value></test-string>
+    <test-string><address>x0109</address><value>| | | | |</value></test-string>
+    <test-string><address>x010A</address><value>+-+-+-+-+</value></test-string>
+    </output>
+    </test-case>
+ 
+ </test-suite>

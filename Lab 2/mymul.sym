@@ -1,0 +1,11 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	dmul                    300E
+//	dmul1                   300A
+//	done                    3020
+//	dsgn                    301F
+//	loopmul                 3005
+//	mulret                  3003
+//	sgnP                    300F
+//	skpsgn1                 3015
+//	skpsgn2                 301A

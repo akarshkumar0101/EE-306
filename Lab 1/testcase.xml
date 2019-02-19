@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<test-suite>
+ <test-case>
+  <name>1: Zero Rotate</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>xABCD</value></test-register>
+	<test-register><register>R1</register><value>0</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>xABCD</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>2: Max Right-Rotate</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>xABCD</value></test-register>
+	<test-register><register>R1</register><value>-16</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>xABCD</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>3: Max Left-Rotate</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>xABCD</value></test-register>
+	<test-register><register>R1</register><value>16</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>xABCD</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>4: Input 0</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>0</value></test-register>
+	<test-register><register>R1</register><value>-12</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>0</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>5: Rotate 0 by 0</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>0</value></test-register>
+	<test-register><register>R1</register><value>0</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>0</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>6: Rotate xABCD by 4</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>xABCD</value></test-register>
+	<test-register><register>R1</register><value>4</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>xBCDA</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>7: Rotate x160E by 7</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x160E</value></test-register>
+	<test-register><register>R1</register><value>7</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x070B</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>8: Rotate x93D5 by 2</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x93D5</value></test-register>
+	<test-register><register>R1</register><value>2</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x4F56</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>9: Rotate x3382 by 8</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x3382</value></test-register>
+	<test-register><register>R1</register><value>8</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x8233</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>10: Rotate x9126 by 10</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x9126</value></test-register>
+	<test-register><register>R1</register><value>10</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x9A44</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>11: Rotate x64D7 by 1</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x64D7</value></test-register>
+	<test-register><register>R1</register><value>1</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>xC9AE</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>12: Rotate x203B by 3</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x203B</value></test-register>
+	<test-register><register>R1</register><value>3</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x01D9</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>13: Rotate x857F by 6</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x857F</value></test-register>
+	<test-register><register>R1</register><value>6</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x5FE1</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>14: Rotate xAEDC by 5</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>xAEDC</value></test-register>
+	<test-register><register>R1</register><value>5</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>xDB95</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>15: Rotate x96AB by -1</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x96AB</value></test-register>
+	<test-register><register>R1</register><value>-1</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>xCB55</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>16: Rotate x1949 by -10</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x1949</value></test-register>
+	<test-register><register>R1</register><value>-10</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x5246</value></test-register>
+   </output>
+ </test-case>
+ 
+  <test-case>
+  <name>17: Rotate x061D by -14</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>x061D</value></test-register>
+	<test-register><register>R1</register><value>-14</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x1874</value></test-register>
+   </output>
+ </test-case>
+
+ <test-case>
+  <name>18: Rotate xA110 by -7</name>
+  <has-max-executions>1</has-max-executions>
+  <max-executions>100000000</max-executions>
+  <fully-randomize>1</fully-randomize>
+   <input>
+    <test-register><register>R0</register><value>xA110</value></test-register>
+	<test-register><register>R1</register><value>-7</value></test-register>
+   </input>
+   <output>
+    <test-register><register>R0</register><value>x2142</value></test-register>
+   </output>
+ </test-case>
+
+ </test-suite>

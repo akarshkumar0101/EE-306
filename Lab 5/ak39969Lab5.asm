@@ -1,0 +1,186 @@
+; Title: ID Card Data Parser - Main Program
+; Name: Akarsh Kumar
+; EID: ak39969
+; Date: 12/9/18
+; Recitation Section: F 11AM
+; Description of program: 
+
+.ORIG x3000
+
+LEA R0, STARTS
+PUTS
+
+; set up ISR
+
+LD R6, SP
+LD R1, KBISR
+LD R2, KBISRV
+STR R1, R2, #0
+
+LOOP
+
+LD R1, INTEN
+LD R2, KBSR
+STR R1, R2, #0
+
+LDI R0, CHAR
+BRz LOOP
+
+;got a character
+
+OUT
+
+LEA R1, CODE
+ADD R2, R1, #1
+LDR R2, R2, #0
+STR R2, R1, #0
+
+ADD R1, R1, #1
+ADD R2, R1, #1
+LDR R2, R2, #0
+STR R2, R1, #0
+
+ADD R1, R1, #1
+ADD R2, R1, #1
+LDR R2, R2, #0
+STR R2, R1, #0
+
+ADD R1, R1, #1
+ADD R2, R1, #1
+LDR R2, R2, #0
+STR R2, R1, #0
+
+ADD R1, R1, #1
+
+ADD R0, R0, #-15
+ADD R0, R0, #-15
+ADD R0, R0, #-15
+ADD R0, R0, #-3
+
+STR R0, R1, #0
+
+JSR CHECKAC
+
+AND R0, R0, #0
+STI R0, CHAR
+
+LD R0, ACC
+
+BRp GOTIT
+
+LDI R0, NUMCHAR
+ADD R0, R0, #-16
+BRz NO
+
+BRnzp NEITH
+
+GOTIT
+
+LEA R0, NL
+PUTS
+
+LEA R0, GRANTS
+PUTS
+
+AND R0, R0, #0
+ST R0, ACC
+
+BRnzp BOTH
+
+NO
+
+LEA R0, NL
+PUTS
+
+LEA R0, DENIEDS
+PUTS
+
+BRnzp BOTH
+
+BOTH
+LEA R0, NL
+PUTS
+
+AND R0, R0, #0
+STI R0, NUMCHAR
+
+NEITH
+BRnzp LOOP
+
+HALT
+; Data fields go here - don't put data in main program
+SP	.FILL xF000
+KBISR	.FILL xA000
+KBISRV	.FILL x180
+KBSR	.FILL xFE00
+KBDR	.FILL xFE02
+INTEN	.FILL x4000
+
+CHAR	.FILL x8000
+NUMCHAR	.FILL x8001
+
+CODE	.BLKW 5
+
+ACC .FILL #0
+
+CHECKAC
+ST R0, CHR0
+ST R1, CHR1
+
+LEA R1, CODE
+LDR R0, R1, #0
+
+ADD R0, R0, #-1
+BRnp CHDNE
+
+LDR R0, R1, #1
+
+ADD R0, R0, #-6
+BRnp CHDNE
+
+LDR R0, R1, #2
+
+ADD R0, R0, #-1
+BRnp CHDNE
+
+LDR R0, R1, #3
+
+BRn CHDNE
+ADD R0, R0, #-1
+BRp CHDNE
+
+LDR R0, R1, #4
+
+BRn CHDNE
+ADD R0, R0, #-1
+BRz CHDNE
+ADD R0, R0, #-1
+BRz CHDNE
+ADD R0, R0, #-1
+BRz CHDNE
+ADD R0, R0, #-1
+BRz CHDNE
+ADD R0, R0, #-1
+BRp CHDNE
+
+;got it
+AND R0, R0, #0
+ADD R0, R0, #1
+ST R0, ACC
+
+CHDNE
+
+LD R0, CHR0
+LD R1, CHR1
+RET
+
+CHR0	.BLKW 1
+CHR1	.BLKW 1
+
+DENIEDS	.STRINGZ "Access Denied!\n"
+GRANTS	.STRINGZ "Access Granted!\n"
+NL	.STRINGZ "\n"
+
+STARTS	.STRINGZ "Name: Akarsh Kumar\nEID: ak39969\nDate: 12/9/2018\nTitle: ID Card Data Parser\n\n"
+
+.END

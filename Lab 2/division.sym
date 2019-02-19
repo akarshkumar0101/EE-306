@@ -1,0 +1,10 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	ddiv1                   300C
+//	divret                  3003
+//	done                    3020
+//	dsgn                    301F
+//	loopdiv                 3007
+//	sgnP                    300F
+//	skpsgn1                 3015
+//	skpsgn2                 301A
